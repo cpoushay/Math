@@ -28,7 +28,8 @@ public class ComplexNumber {
                                     this.getImaginaryPart()+that.getImaginaryPart());
     }
     public ComplexNumber subtract(ComplexNumber that) {
-       return this;
+       return new ComplexNumber(this.getRealPart()-that.getRealPart(),
+               this.getImaginaryPart() - that.getImaginaryPart());
     }
     @Override
     public boolean equals(Object o) {

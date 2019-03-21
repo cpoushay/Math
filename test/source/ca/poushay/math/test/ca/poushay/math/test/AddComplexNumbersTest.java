@@ -36,4 +36,5 @@ public class AddComplexNumbersTest {
     public void complexNumberPlusComplexNumber() {
         assertEquals(new ComplexNumber(7., 7.5), new ComplexNumber(4.3, 6).add(new ComplexNumber(2.7, 1.5)));
     }
+
 }
