@@ -18,5 +18,13 @@ public class AddComplexNumbers {
 
         assertEquals("i",new ComplexNumber(0,1).getImaginaryPart());
     }
+    @Test
+    public void OneRealOneImaginaryComplexNumberTest() {
+
+        ComplexNumber complexNumber = new ComplexNumber(1, 1);
+
+        assertEquals(1,complexNumber.getRealPart());
+        assertEquals("i",complexNumber.getImaginaryPart());
+    }
 
 }
