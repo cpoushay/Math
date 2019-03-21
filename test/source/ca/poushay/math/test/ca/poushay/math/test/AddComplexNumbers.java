@@ -13,6 +13,10 @@ public class AddComplexNumbers {
 
         assertEquals(1,new ComplexNumber(1,0).getRealPart());
     }
+    @Test
+    public void imaginaryNumberEqualsI() {
 
+        assertEquals("i",new ComplexNumber(0,1).getImaginaryPart());
+    }
 
 }
