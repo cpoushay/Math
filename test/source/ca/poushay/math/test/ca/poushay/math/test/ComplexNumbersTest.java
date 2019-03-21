@@ -12,7 +12,7 @@ public class ComplexNumbersTest {
     private double delta = 10^-9;
 
     @Test
-    public void noImaginaryPartComplexNumberEquals() {
+    public void oneEqualsOne() {
 
         assertEquals(1,
                      new ComplexNumber(1,0).getRealPart(),
@@ -20,7 +20,7 @@ public class ComplexNumbersTest {
     }
 
     @Test
-    public void imaginaryNumberEqualsI() {
+    public void oneImaginaryEqualsOne() {
 
         assertEquals(1,
                     new ComplexNumber(0,1).getImaginaryPart(),
