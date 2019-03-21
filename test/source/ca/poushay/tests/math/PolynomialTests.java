@@ -3,8 +3,7 @@ package ca.poushay.tests.math;
 import ca.poushay.math.Polynomial;
 import org.junit.Test;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.*;
 
 public class PolynomialTests {
 
@@ -15,4 +14,6 @@ public class PolynomialTests {
         assertEquals(-12.6, new Polynomial(new double[]{-12.6}).getValue(-14.2));
 
     }
+
+
 }

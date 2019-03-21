@@ -7,7 +7,8 @@ public class Polynomial {
 
     private final double[] coeffiecients;
 
-    public Polynomial(double[] doubles) throws IllegalArgumentException {
+
+    public Polynomial(double... doubles) throws IllegalArgumentException {
         if(Objects.isNull(doubles)) throw new IllegalArgumentException("input parameter cannot be null");
 
         int length = doubles.length;
