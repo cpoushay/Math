@@ -1,4 +1,4 @@
-package ca.poushay.math.test.ca.poushay.math.test;
+package ca.poushay;
 
 public class ComplexNumber {
     final public double realPart;

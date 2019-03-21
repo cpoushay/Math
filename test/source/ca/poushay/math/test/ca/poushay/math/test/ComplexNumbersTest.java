@@ -1,11 +1,12 @@
 package ca.poushay.math.test.ca.poushay.math.test;
 
+import ca.poushay.ComplexNumber;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
-public class AddComplexNumbers {
+public class ComplexNumbersTest {
 
 
     private double delta = 10^-9;
