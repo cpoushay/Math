@@ -49,4 +49,9 @@ public class ComplexNumber {
        return new ComplexNumber( this.getRealPart()* that.getRealPart() - this.getImaginaryPart()* that.getImaginaryPart(),
                this.getRealPart() * that.getImaginaryPart() + this.getImaginaryPart() * that.getRealPart());
     }
+
+
+    public ComplexNumber conjugate() {
+    return new ComplexNumber(this.getRealPart(), -this.getImaginaryPart());
+    }
 }
