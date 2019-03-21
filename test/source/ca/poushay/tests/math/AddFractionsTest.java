@@ -1,6 +1,7 @@
-package ca.poushay.math.test.ca.poushay.math.test;
+package ca.poushay.tests.math;
 
-import ca.poushay.Fraction;
+import ca.poushay.math.Fraction;
+import org.junit.Assert;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
@@ -9,7 +10,7 @@ public class AddFractionsTest {
 
     @Test
     public void zeroPlusZero() {
-        assertEquals(new Fraction(0), new Fraction(0).plus(new Fraction(0)));
+        Assert.assertEquals(new Fraction(0), new Fraction(0).plus(new Fraction(0)));
     }
 
     @Test

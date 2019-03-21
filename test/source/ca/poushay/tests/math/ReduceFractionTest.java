@@ -1,6 +1,7 @@
-package ca.poushay.math.test.ca.poushay.math.test;
+package ca.poushay.tests.math;
 
-import ca.poushay.Fraction;
+import ca.poushay.math.Fraction;
+import org.junit.Assert;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
@@ -9,7 +10,7 @@ public class ReduceFractionTest {
 
     @Test
     public void alreadyLowestTerms() {
-        assertEquals(new Fraction(3,4), new Fraction(3,4));
+        Assert.assertEquals(new Fraction(3,4), new Fraction(3,4));
     }
 
     @Test

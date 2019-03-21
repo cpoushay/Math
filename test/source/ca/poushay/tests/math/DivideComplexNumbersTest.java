@@ -1,6 +1,7 @@
-package ca.poushay.math.test.ca.poushay.math.test;
+package ca.poushay.tests.math;
 
-import ca.poushay.ComplexNumber;
+import ca.poushay.math.ComplexNumber;
+import org.junit.Assert;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
@@ -9,7 +10,7 @@ public class DivideComplexNumbersTest {
 
     @Test
     public void complexNumberDividedByOne() {
-        assertEquals(new ComplexNumber(1.4,5),new ComplexNumber(1.4,5).divide(new ComplexNumber(1)) );
+        Assert.assertEquals(new ComplexNumber(1.4,5),new ComplexNumber(1.4,5).divide(new ComplexNumber(1)) );
     }
     @Test
     public void complexNumberDividedByComplexNumber() {

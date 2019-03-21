@@ -1,4 +1,4 @@
-package ca.poushay;
+package ca.poushay.math;
 
 import java.security.InvalidParameterException;
 

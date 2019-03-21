@@ -1,6 +1,7 @@
-package ca.poushay.math.test.ca.poushay.math.test;
+package ca.poushay.tests.math;
 
-import ca.poushay.Fraction;
+import ca.poushay.math.Fraction;
+import org.junit.Assert;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
@@ -10,7 +11,7 @@ public class FractionEqualsTest {
 
     @Test
     public void sameNumeratorAndDenominator() {
-        assertEquals(new Fraction(3,5), new Fraction(3,5));
+        Assert.assertEquals(new Fraction(3,5), new Fraction(3,5));
     }
     @Test
     public void differentNumerators() {

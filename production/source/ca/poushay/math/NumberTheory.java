@@ -1,4 +1,4 @@
-package ca.poushay;
+package ca.poushay.math;
 
 public class NumberTheory {
     public static int gcd(int a, int b) {

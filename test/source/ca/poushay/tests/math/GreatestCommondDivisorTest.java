@@ -1,6 +1,6 @@
-package ca.poushay.math.test.ca.poushay.math.test;
+package ca.poushay.tests.math;
 
-import ca.poushay.NumberTheory;
+import ca.poushay.math.NumberTheory;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;

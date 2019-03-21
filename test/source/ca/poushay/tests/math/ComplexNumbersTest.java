@@ -1,6 +1,6 @@
-package ca.poushay.math.test.ca.poushay.math.test;
+package ca.poushay.tests.math;
 
-import ca.poushay.ComplexNumber;
+import ca.poushay.math.ComplexNumber;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;

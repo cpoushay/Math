@@ -1,6 +1,7 @@
-package ca.poushay.math.test.ca.poushay.math.test;
+package ca.poushay.tests.math;
 
-import ca.poushay.ComplexNumber;
+import ca.poushay.math.ComplexNumber;
+import org.junit.Assert;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
@@ -10,7 +11,7 @@ public class AddComplexNumbersTest {
     @Test
     public void zeroPlusZero() {
 
-        assertEquals(new ComplexNumber(0), new ComplexNumber(0).add(new ComplexNumber(0)));
+        Assert.assertEquals(new ComplexNumber(0), new ComplexNumber(0).add(new ComplexNumber(0)));
 
     }
 
