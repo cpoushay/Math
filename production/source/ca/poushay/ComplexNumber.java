@@ -36,7 +36,8 @@ public class ComplexNumber {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         ComplexNumber that = (ComplexNumber) o;
-        return this.getRealPart().equals(that.getRealPart());
+        return this.getRealPart().equals(that.getRealPart())
+                && this.getImaginaryPart().equals(that.imaginaryPart);
     }
 
     @Override
@@ -54,4 +55,22 @@ public class ComplexNumber {
     public ComplexNumber conjugate() {
     return new ComplexNumber(this.getRealPart(), -this.getImaginaryPart());
     }
+
+    public ComplexNumber divide(ComplexNumber that) {
+
+        double realPart = (this.getRealPart()*that.getRealPart() + this.getImaginaryPart() * that.getImaginaryPart())
+                    / (Math.pow( that.getRealPart(), 2.) + Math.pow(that.getImaginaryPart(),2.));
+
+        double imaginaryPart = (this.getImaginaryPart() * that.getRealPart() - this.getRealPart() * that.getImaginaryPart() )
+                / (Math.pow( that.getRealPart(), 2.) + Math.pow(that.getImaginaryPart(),2.));
+
+        return new ComplexNumber(realPart, imaginaryPart);
+
+
+    }
+    @Override
+    public String toString() {
+        return String.format("%.2f + %.2fi", this.getRealPart(), this.getImaginaryPart());
+    }
+
 }
