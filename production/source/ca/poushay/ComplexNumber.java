@@ -27,7 +27,9 @@ public class ComplexNumber {
         return new ComplexNumber(this.getRealPart() + that.getRealPart(),
                                     this.getImaginaryPart()+that.getImaginaryPart());
     }
-
+    public ComplexNumber subtract(ComplexNumber that) {
+       return this;
+    }
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -40,4 +42,6 @@ public class ComplexNumber {
     public int hashCode() {
         return Objects.hash(realPart, imaginaryPart);
     }
+
+
 }
