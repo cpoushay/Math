@@ -1,18 +1,21 @@
 package ca.poushay.math.test.ca.poushay.math.test;
 
 public class ComplexNumber {
-    final public int realPart;
+    final public double realPart;
+    final public double imaginaryPart;
 
 
-    public ComplexNumber(int realPart, int imaginaryPart) {
+    public ComplexNumber(double realPart, double imaginaryPart) {
         this.realPart = realPart;
+        this.imaginaryPart = imaginaryPart;
     }
 
-    public int getRealPart() {
+    public double getRealPart() {
         return realPart;
     }
 
-    public String getImaginaryPart() {
-        return "i";
+    public double getImaginaryPart() {
+
+        return imaginaryPart;
     }
 }
