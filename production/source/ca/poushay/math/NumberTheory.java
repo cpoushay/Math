@@ -19,4 +19,11 @@ public class NumberTheory {
     public static boolean greaterThan(double a, double b){
         return a-b > DELTA;
     }
+
+    public static int min(int a, int b) {
+        return a <= b ? a : b;
+    }
+    public static int max(int a, int b) {
+        return a >= b ? a : b;
+    }
 }

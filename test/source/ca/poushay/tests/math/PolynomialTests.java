@@ -14,6 +14,7 @@ public class PolynomialTests {
         assertEquals(-12.6, new Polynomial(new double[]{-12.6}).evaluate() , NumberTheory.DELTA);
         assertEquals(-12.6, new Polynomial(new double[]{-12.6}).evaluate(), NumberTheory.DELTA);
 
+
     }
 
 

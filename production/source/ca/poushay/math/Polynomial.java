@@ -24,10 +24,41 @@ public class Polynomial {
     }
 
     public Polynomial add(Polynomial that) {
-        if (NumberTheory.greaterThan(this.evaluate(), that.evaluate())) {
-            return this;
-        } else {
-            return that;
+
+        final int minLength  = NumberTheory.min(getCoeffiecients().length, that.getCoeffiecients().length);
+        final int maxLength = NumberTheory.max(getCoeffiecients().length, that.getCoeffiecients().length);
+
+        double[] newCoefficients = new double[maxLength];
+
+        double[] thisCoeffiecents = this.getCoeffiecients();
+        double[] thatCoeffiecents = that.getCoeffiecients();
+
+        for (int i = 0; i < minLength; ++i) {
+            newCoefficients[i] = thisCoeffiecents[i] + thatCoeffiecents[i];
         }
+        System.arraycopy((thisCoeffiecents.length < thatCoeffiecents.length) ?
+                        thatCoeffiecents : thisCoeffiecents,
+                minLength,
+                        newCoefficients, minLength,
+                maxLength - minLength);
+
+        return new Polynomial(newCoefficients);
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Polynomial that = (Polynomial) o;
+        return Arrays.equals(coeffiecients, that.coeffiecients);
+    }
+
+    @Override
+    public int hashCode() {
+        return Arrays.hashCode(coeffiecients);
+    }
+
+    public double[] getCoeffiecients() {
+        return coeffiecients;
     }
 }
