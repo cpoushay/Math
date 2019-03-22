@@ -29,7 +29,7 @@ public class AddComplexNumbersTest {
 
     @Test
     public void iPlusI() {
-        assertEquals(new ComplexNumber(0., 1), new ComplexNumber(0., 1).add(new ComplexNumber(0, 1)));
+        assertEquals(new ComplexNumber(0., 2), new ComplexNumber(0., 1).add(new ComplexNumber(0, 1)));
 
     }
 

@@ -10,10 +10,11 @@ public class CoomplexConjugateTests {
 
     @Test
     public void conjugateOfOne() {
-        Assert.assertEquals(new ComplexNumber(1), new ComplexNumber(1).conjugate());
+         assertEquals(new ComplexNumber(1), new ComplexNumber(1).conjugate());
     }
     @Test
     public void conjugateOfOneI() {
+
         assertEquals(new ComplexNumber(0,-1), new ComplexNumber(0,1).conjugate());
     }
 

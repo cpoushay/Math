@@ -36,8 +36,8 @@ public class ComplexNumber {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         ComplexNumber that = (ComplexNumber) o;
-        return this.getRealPart().equals(that.getRealPart())
-                && this.getImaginaryPart().equals(that.imaginaryPart);
+        return NumberTheory.equals(this.getRealPart(),that.getRealPart())
+                && NumberTheory.equals(this.getImaginaryPart(), (that.imaginaryPart));
     }
 
     @Override
