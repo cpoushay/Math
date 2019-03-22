@@ -44,6 +44,30 @@ public class Polynomial {
 
         return new Polynomial(newCoefficients);
     }
+    public Polynomial subtract(Polynomial that) {
+
+        final int minLength  = NumberTheory.min(getCoeffiecients().length, that.getCoeffiecients().length);
+        final int maxLength = NumberTheory.max(getCoeffiecients().length, that.getCoeffiecients().length);
+
+        double[] newCoefficients = new double[maxLength];
+
+        double[] thisCoeffiecents = this.getCoeffiecients();
+        double[] thatCoeffiecents = that.getCoeffiecients();
+
+        for (int i = 0; i < minLength; ++i) {
+            newCoefficients[i] = thisCoeffiecents[i] - thatCoeffiecents[i];
+        }
+        if (thisCoeffiecents.length < thatCoeffiecents.length) {
+            for (int i = minLength; i < maxLength; ++i) {
+                newCoefficients[i] = -thatCoeffiecents[i];
+            }
+        } else {
+            System.arraycopy(thisCoeffiecents, minLength, newCoefficients, minLength,
+                    maxLength - minLength);
+        }
+
+        return new Polynomial(newCoefficients);
+    }
 
     @Override
     public boolean equals(Object o) {
