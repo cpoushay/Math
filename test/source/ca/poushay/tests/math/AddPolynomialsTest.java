@@ -7,4 +7,8 @@ import static org.junit.Assert.assertEquals;
 
 public class AddPolynomialsTest {
 
+    @Test
+    public void zeroPlusZero() {
+        assertEquals(0, new Polynomial(0).add(new Polynomial(0)).evaluate());
+    }
 }

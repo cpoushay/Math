@@ -19,7 +19,11 @@ public class Polynomial {
         System.arraycopy(doubles, 0, coeffiecients, 0, length);
     }
 
-    public double getValue(double argument) {
+    public double evaluate() {
         return coeffiecients[0];
+    }
+
+    public Polynomial add(Polynomial that) {
+        return this;
     }
 }
