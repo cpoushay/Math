@@ -9,10 +9,10 @@ public class Polynomial {
 
 
     public Polynomial(double... doubles) throws IllegalArgumentException {
-        if(Objects.isNull(doubles)) throw new IllegalArgumentException("input parameter cannot be null");
+        if (Objects.isNull(doubles)) throw new IllegalArgumentException("input parameter cannot be null");
 
         int length = doubles.length;
-        if(length == 0) throw new IllegalArgumentException("input parameter cannot be an empty array");
+        if (length == 0) throw new IllegalArgumentException("input parameter cannot be an empty array");
 
         coeffiecients = new double[length];
 
@@ -24,6 +24,10 @@ public class Polynomial {
     }
 
     public Polynomial add(Polynomial that) {
-        return this;
+        if (NumberTheory.greaterThan(this.evaluate(), that.evaluate())) {
+            return this;
+        } else {
+            return that;
+        }
     }
 }

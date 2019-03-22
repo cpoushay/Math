@@ -1,7 +1,8 @@
 package ca.poushay.math;
 
 public class NumberTheory {
-    public static final double DELTA = Math.pow(1,-8);
+    public static final double DELTA = Math.pow(10,-8);
+
     public static int gcd(int a, int b) {
         while (b != 0) {
             int t = b;
@@ -13,5 +14,9 @@ public class NumberTheory {
 
     public static boolean equals(double a, double b){
         return Math.abs(a-b) < DELTA;
+    }
+
+    public static boolean greaterThan(double a, double b){
+        return a-b > DELTA;
     }
 }
