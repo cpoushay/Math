@@ -9,6 +9,6 @@ public class AddPolynomialsTest {
 
     @Test
     public void zeroPlusZero() {
-        assertEquals(0, new Polynomial(0).add(new Polynomial(0)).evaluate());
+        assertEquals(0., new Polynomial(0).add(new Polynomial(0)).evaluate(), .00001);
     }
 }

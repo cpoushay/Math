@@ -19,7 +19,7 @@ public class Polynomial {
         System.arraycopy(doubles, 0, coeffiecients, 0, length);
     }
 
-    public double evaluate() {
+    public Double evaluate() {
         return coeffiecients[0];
     }
 
